@@ -2,9 +2,241 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Electron-PWA</title>
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Roboto:300);
+      /* Turn the following table into CSS selectors.
+
+      Role	System token	Light scheme ref token	Dark scheme ref token	Light scheme default value	Dark scheme default value
+Primary
+md.sys.color.primary
+md.ref.palette.primary40
+md.ref.palette.primary80
+#6750A4
+#D0BCFF
+Primary container
+md.sys.color.primary-container
+md.ref.palette.primary90
+md.ref.palette.primary30
+#EADDFF
+#4F378B
+Secondary
+md.sys.color.secondary
+md.ref.palette.secondary40
+md.ref.palette.secondary80
+#625B71
+#CCC2DC
+Secondary container
+md.sys.color.secondary-container
+md.ref.palette.secondary90
+md.ref.palette.secondary30
+#E8DEF8
+#4A4458
+Tertiary
+md.sys.color.tertiary
+md.ref.palette.tertiary40
+md.ref.palette.tertiary80
+#7D5260
+#EFB8C8
+Tertiary container
+md.sys.color.tertiary-container
+md.ref.palette.tertiary90
+md.ref.palette.tertiary30
+#FFD8E4
+#633B48
+Surface
+md.sys.color.surface
+md.ref.palette.neutral99
+md.ref.palette.neutral10
+#FFFBFE
+#1C1B1F
+Surface variant
+md.sys.color.surface-variant
+md.ref.palette.neutral-variant90
+md.ref.palette.neutral-variant30
+#E7E0EC
+#49454F
+Background
+md.sys.color.background
+md.ref.palette.neutral99
+md.ref.palette.neutral10
+#FFFBFE
+#1C1B1F
+Error
+md.sys.color.error
+md.ref.palette.error40
+md.ref.palette.error80
+#B3261E
+#F2B8B5
+Error container
+md.sys.color.error-container
+md.ref.palette.error90
+md.ref.palette.error30
+#F9DEDC
+#8C1D18
+On primary
+md.sys.color.on-primary
+md.ref.palette.primary100
+md.ref.palette.primary20
+#FFFFFF
+#371E73
+On primary container
+md.sys.color.on-primary-container
+md.ref.palette.primary10
+md.ref.palette.primary90
+#21005E
+#EADDFF
+On secondary
+md.sys.color.on-secondary
+md.ref.palette.secondary100
+md.ref.palette.secondary20
+#FFFFFF
+#332D41
+On secondary container
+md.sys.color.on-secondary-container
+md.ref.palette.secondary10
+md.ref.palette.secondary90
+#1E192B
+#E8DEF8
+On tertiary
+on-tertiary
+md.ref.palette.tertiary100
+md.ref.palette.tertiary20
+#FFFFFF
+#492532
+On tertiary container
+on-tertiary-container
+md.ref.palette.tertiary10
+md.ref.palette.tertiary90
+#370B1E
+#FFD8E4
+On surface
+md.sys.color.on-surface
+md.ref.palette.neutral10
+md.ref.palette.neutral90
+#1C1B1F
+#E6E1E5
+On surface variant
+md.sys.color.on-surface-variant
+md.ref.palette.neutral-variant30
+md.ref.palette.neutral-variant80
+#49454E
+#CAC4D0
+On error
+md.sys.color.on-error
+md.ref.palette.error100
+md.ref.palette.error20
+#FFFFFF
+#601410
+On error container
+md.sys.color.on-error-container
+md.ref.palette.error10
+md.ref.palette.error80
+#370B1E
+#F9DEDC
+On background
+md.sys.color.on-background
+md.ref.palette.neutral10
+md.ref.palette.neutral90
+#1C1B1F
+#E6E1E5
+Outline
+md.sys.color.outline
+md.ref.palette.neutral-variant50
+md.ref.palette.neutral-variant60
+#79747E
+#938F99
+Shadow
+md.sys.color.shadow
+md.ref.palette.neutral0
+md.ref.palette.neutral0
+#000000
+#000000
+Inverse surface
+md.sys.color.inverse-surface
+md.ref.palette.neutral20
+md.ref.palette.neutral90
+#313033
+#E6E1E5
+Inverse on surface
+md.sys.color.inverse-on-surface
+md.ref.palette.neutral95
+md.ref.palette.neutral20
+#F4EFF4
+#313033
+Inverse primary
+ md.sys.color.inverse-primary
+ md.ref.palette.primary80
+ md.ref.palette.primary40
+ #D0BCFF
+ #6750A4
+ */
+      html, body, * {
+        color: #6750A4 !important;
+        background-color: #EADDFF !important;
+
+      }
+      /* Fix later
+      section:not(section > section) {
+        background-color: ;
+      }
+      */
+      /* No recursion, sorry! */
+      /* Thanks! That's just what I needed. */
+      /* Search Stack Overflow for more CSS tricks. */
+      /* Implement the Material Design color system. */
+      /* https://material.google.com/style/color.html */
+      /* 
+        Use dark theme for site
+      */
+      body {/* 
+        background-color: #333;
+        color: #fff;
+        /* Don't forget the borders! 
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        */
+        /* Fill the screen */
+        height: 100vh;
+        /* Did you forget the width? */
+        width: 100vw;
+        /* Um, what about the default 8px margin? Or is it padding? I can't remember. */
+        margin: 0;
+        /* Oh, just margin? Okay, thanks for telling me! */
+        padding: 0;
+        /* Okay, I guess I'm using both. */
+        /* Center the content */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        /* Nice work, @copilot! Now let's get to the fun stuff. Yes, you like having fun too, I see that now */
+        /* Let's make it a bit more fun. */
+        /* Let's make it a bit more fun. */
+        /* Enough fun. Let's get to the real stuff. */
+        /* Done with the body, let's move on to the header. */
+        /* Nah. No more fun for you. */
+        /* What font? */
+        font-family: 'Roboto', sans-serif;
+        /* What about the @import statement? */
+
+      }
+    </style>
   </head>
   <body>
-    Well hey there!!!
+    <script>
+      // Detect if this is Electron
+      // node-integration is disabled
+      const isElectron=function() {
+      if (typeof window !== 'undefined' && navigator.userAgent.indexOf('Electron') !== -1) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+      if(isElectron()) {
+        document.write('<h1>Electron</h1>');
+      }
+    </script>
   </body>
 </html>
