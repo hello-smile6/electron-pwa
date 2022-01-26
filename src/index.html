@@ -226,6 +226,7 @@ Inverse primary
   </head>
   <body>
     <script>
+      navigator.serviceWorker.register("./sw.js");
       // Detect if this is Electron
       // node-integration is disabled
       const isElectron=function() {
