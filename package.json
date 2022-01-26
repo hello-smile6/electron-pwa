@@ -1,0 +1,75 @@
+{
+  "name": "electron-pwa",
+  "productName": "electron-pwa",
+  "version": "1.0.0",
+  "description": "My Electron application description",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "eslint src --color",
+    "dev": "concurrently --kill-others \"npm:dev-server\" \"npm:start\"",
+    "dev-sw": "workbox generateSW --watch workbox-config.js",
+    "dev-server": "concurrently --kill-others \"npm:dev-sw\" \"npm:serve\"",
+    "serve": "http-server --port 8000 --cors * --brotli true -c-1"
+  },
+  "keywords": [],
+  "author": "hello-smile6",
+  "license": "GPL-3.0-or-later",
+  "config": {
+    "forge": {
+      "make_targets": {
+        "win32": [
+          "squirrel"
+        ],
+        "darwin": [
+          "zip"
+        ],
+        "linux": [
+          "deb",
+          "rpm"
+        ]
+      },
+      "electronPackagerConfig": {
+        "packageManager": "npm"
+      },
+      "electronWinstallerConfig": {
+        "name": "electron_pwa"
+      },
+      "electronInstallerDebian": {},
+      "electronInstallerRedhat": {},
+      "github_repository": {
+        "owner": "",
+        "name": ""
+      },
+      "windowsStoreConfig": {
+        "packageName": "",
+        "name": "electronpwa"
+      }
+    }
+  },
+  "dependencies": {
+    "chromium": "^3.0.3",
+    "concurrently": "^7.0.0",
+    "electron": "^16.0.7",
+    "electron-compile": "^6.4.4",
+    "electron-squirrel-startup": "^1.0.0",
+    "node": "^17.4.0"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "electron-forge": "^5.2.4",
+    "electron-prebuilt-compile": "8.2.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.28.0",
+    "workbox": "^0.0.0",
+    "workbox-cli": "^6.4.2"
+  }
+}
